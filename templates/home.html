@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <!--Head Section-->
+    <head>
+        <meta charset="UTF-8" />
+	    <title>Home Page</title>
+	    <link href="../static/homestyles.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    </head>
+
+    <!--Body Section-->
+    <body>
+        <!---Header image and text-->
+        <div>
+            <div class="header-content conainter-fluid">
+                <div class="header-text">
+                    <h1>Add Movies</h1>
+                    <h6><i>Movies & Ratings For The Movies You Have Watched</i></h6>
+                </div>
+                <!--Form Box -->
+                <form action="/" method="POST">
+                    <div class="form-field">
+                        <input type="email" class = "input-group-text email" name = "email" placeholder="Email address" required>
+                    </div>
+                    <div class="form-field">
+                        <select class="selectpicker" data-live-search="true" name="movies[]">
+                            <option value="" disabled selected hidden>Select Movies</option>
+                            {%for t in titles%}
+                            <option value="{{t}}">{{t}}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="number" class = "input-group-text ratings" name = "ratings[]" placeholder="Rating" min="0.0" max="5.0">
+                    </div>
+                    <div class="form-field">
+                        <select class="selectpicker" data-live-search="true" name="movies[]">
+                            <option value="" disabled selected hidden>Select Movies</option>
+                            {%for t in titles%}
+                            <option value="{{t}}">{{t}}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="number" class = "input-group-text ratings" name = "ratings[]" placeholder="Rating" min="0.0" max="5.0">
+                    </div>
+                    <div class="form-field">
+                        <select class="selectpicker" data-live-search="true" name="movies[]">
+                            <option value="" disabled selected hidden>Select Movies</option>
+                            {%for t in titles%}
+                            <option value="{{t}}">{{t}}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="number" class = "input-group-text ratings" name = "ratings[]" placeholder="Rating" min="0.0" max="5.0">
+                    </div>
+                    <input type="submit"  id = "submit" class="btn btn-primary bg-transparent" style="border-color: antiquewhite; width: 100px;">
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
