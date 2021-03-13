@@ -1,0 +1,44 @@
+.header-content{
+	background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url(img/header.jpg);
+    position: fixed;
+	background-size: cover;
+	height: 150%;
+    width: 100%;
+	color: white;
+}
+
+.header-content > h1{
+    padding-left: 350px;
+}
+
+.header-content > h6{
+    padding-left: 350px;
+    font-style: italic;
+}
+
+.header-text{
+    padding-top: 250px;
+    padding-left: 450px;
+}
+
+.form-field{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ratings{
+    width: 100px;
+    margin-left: 10px;
+    margin-bottom: 4px;
+}
+
+.email{
+    width: 330px;
+}
+form{
+    margin-left: 450px;
+}
+
+.btn-primary {
+    border-color: antiquewhite;
+}
